@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Jeanpierre Christian Salazar Cossio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a0f;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #1b1b2f;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #4ca9ff; /* Celeste */
+        }
+
+        .profile-about {
+            display: flex;
+            align-items: center;
+            background-color: #1b1b2f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            flex: 1;
+        }
+
+        .profile img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .profile h2 {
+            font-size: 2rem; /* Tamaño grande para los nombres */
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        .profile h3 {
+            font-size: 1rem; /* Tamaño pequeño para la carrera */
+            color: #cccccc;
+            margin-top: 10px;
+        }
+
+        .about-me {
+            flex: 2;
+            background-color: #2e2e42;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: justify;
+            margin-left: 20px;
+        }
+
+        .about-me h2 {
+            font-size: 1.8rem;
+            color: #4ca9ff; /* Celeste */
+            margin-bottom: 10px;
+        }
+
+        .about-me p {
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .section {
+            background-color: #1b1b2f;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #2979ff; /* Azul oscuro */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .project {
+            background-color: #0a0a1e;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            max-width: 30%;
+        }
+
+        .project h3 {
+            font-size: 1.5rem;
+            color: #4ca9ff; /* Celeste */
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-size: 1rem;
+            color: #ffffff;
+            text-align: justify;
+        }
+
+        .languages img {
+            width: 80px;
+            height: 80px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 2px solid #ffffff;
+            transition: transform 0.3s ease;
+        }
+
+        .languages img:hover {
+            transform: scale(1.1);
+        }
+
+        .contact {
+            background-color: #1b1b2f;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact p {
+            text-align: justify;
+        }
+
+        .contact a {
+            color: #4ca9ff;
+            text-decoration: none;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>PORTAFOLIO</h1>
+        </header>
+
+        <!-- Foto de Perfil y Sobre mí -->
+        <section class="profile-about">
+            <div class="profile">
+                <img src="{{ url_for('static', filename='images/foto.jpg') }}">
+                <h2>Jeanpierre Christian Salazar Cossio</h2>
+                <h3>Desarrollo de Sistemas de Información</h3>
+            </div>
+            <div class="about-me">
+                <h2>Sobre mí</h2>
+                <p>
+                    Soy estudiante de la carrera de Desarrollo de Sistemas de Información, donde me preparo para diseñar, desarrollar y gestionar soluciones tecnológicas que optimicen procesos y resuelvan problemas en diferentes áreas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tecnologías de Desarrollo Web -->
+        <section class="section">
+            <h2>Tecnologías de Desarrollo Web</h2>
+            <div class="languages" style="text-align: center;">
+                <div>
+                    <h3>Lenguajes de Programación</h3>
+                    <img src="{{ url_for('static', filename='images/csharp.png') }}">
+                    <img src="{{ url_for('static', filename='images/javascript.png') }}">
+                    <img src="{{ url_for('static', filename='images/python.png') }}">
+                    <img src="{{ url_for('static', filename='images/php.png') }}">
+                </div>
+                <div>
+                    <h3>Lenguajes de Marcado y Estilo</h3>
+                    <img src="{{ url_for('static', filename='images/html.png') }}">
+                    <img src="{{ url_for('static', filename='images/css.png') }}">
+                </div>
+                <div>
+                    <h3>Frameworks</h3>
+                    <img src="{{ url_for('static', filename='images/laravel.png') }}">
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="section">
+            <h2>Mis Proyectos</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Sistema de Gestión de Ventas</h3>
+                    <p>
+                        Este sistema automatiza los procesos de ventas y gestiona el control de inventarios en tiempo real. Incluye generación de reportes detallados, análisis de ventas por periodos, y administración de usuarios, todo desarrollado en PHP con MySQL.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Plataforma de Registro Académico</h3>
+                    <p>
+                        Es una aplicación web que facilita el manejo del rendimiento académico de estudiantes. Entre sus características destacan el registro de notas, envío de notificaciones personalizadas y la generación de reportes, implementada usando Laravel con integración de Bootstrap.
+                    </p>
+                </div>
+                <div class="project">
+                    <h3>Aplicación de Reservas de Eventos</h3>
+                    <p>
+                        Sistema web desarrollado en C# que permite gestionar reservas para eventos y realizar pagos en línea. Cuenta con notificaciones automatizadas, integración de métodos de pago, y un panel administrativo para los organizadores de eventos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact">
+            <h2>Contáctame</h2>
+            <p>📧 Correo electrónico: <a href="mailto:i2316938@continental.edu.pe">i2316938@continental.edu.pe</a></p>
+            <p>📱 Teléfono: 902105443</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Creado por Jeanpierre Christian Salazar Cossio</p>
+        </footer>
+    </div>
+</body>
+</html>
